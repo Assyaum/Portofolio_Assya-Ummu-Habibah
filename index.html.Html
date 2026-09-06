@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assya Ummu Habibah - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        navy: {
+                            800: '#1b2a4a',
+                            900: '#0f172a',
+                            950: '#080d1a',
+                        },
+                        silver: {
+                            100: '#f8fafc',
+                            200: '#f1f5f9',
+                            300: '#e2e8f0',
+                            400: '#cbd5e1',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-silver-100 text-slate-800 font-sans antialiased selection:bg-navy-900 selection:text-white">
+
+    <header class="fixed top-0 left-0 right-0 z-40 bg-white/90 backdrop-blur-md border-b border-silver-300 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
+            <!-- Brand Logo -->
+            <a href="#hero" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-navy-900 text-white flex items-center justify-center font-bold text-lg shadow-md group-hover:scale-105 transition-transform">
+                    AU
+                </div>
+                <div>
+                    <span class="font-bold text-base sm:text-lg text-navy-900 block leading-tight">Assya Ummu Habibah</span>
+                    <span class="text-[11px] text-slate-500 font-medium block">Automotive Industrial Engineer</span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600">
+                <a href="#about" class="hover:text-navy-900 transition-colors">About Me</a>
+                <a href="#experience" class="hover:text-navy-900 transition-colors">Work Experience</a>
+                <a href="#organization" class="hover:text-navy-900 transition-colors">Organizations</a>
+                <a href="#skills" class="hover:text-navy-900 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-navy-900 transition-colors">Projects & Research</a>
+                <a href="#certifications" class="hover:text-navy-900 transition-colors">Certifications</a>
+                <a href="#contact" class="px-4 py-2 bg-navy-900 text-white rounded-xl hover:bg-slate-800 transition-all shadow-sm">Contact</a>
+            </nav>
+
+            <!-- Mobile Menu Toggle Button -->
+            <button id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden w-10 h-10 rounded-xl border border-silver-300 flex items-center justify-center text-navy-900 focus:outline-none" aria-label="Toggle Navigation">
+                <i class="fa-solid fa-bars text-lg" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-silver-300 bg-white px-4 py-5 space-y-3 shadow-xl">
+            <a href="#about" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 hover:text-navy-900">About Me</a>
+            <a href="#experience" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 hover:text-navy-900">Work Experience</a>
+            <a href="#organization" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 hover:text-navy-900">Organizations</a>
+            <a href="#skills" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 hover:text-navy-900">Skills</a>
+            <a href="#projects" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 hover:text-navy-900">Projects & Research</a>
+            <a href="#certifications" onclick="toggleMobileMenu()" class="block py-2 text-sm font-semibold text-slate-700 hover:text-navy-900">Certifications</a>
+            <a href="#contact" onclick="toggleMobileMenu()" class="block text-center py-2.5 bg-navy-900 text-white font-semibold text-sm rounded-xl">Contact</a>
+        </div>
+    </header>
+
+    <section id="hero" class="pt-28 sm:pt-36 pb-16 sm:pb-24 relative overflow-hidden bg-gradient-to-b from-silver-200 via-silver-100 to-silver-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl mx-auto text-center space-y-6">
+                
+                <!-- Profile Picture Container -->
+                <div class="relative w-32 h-32 sm:w-36 sm:h-36 mx-auto mb-2 group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-navy-900 via-slate-700 to-navy-800 rounded-full blur opacity-25 group-hover:opacity-60 transition duration-500"></div>
+                    <div class="relative w-full h-full rounded-full p-1 bg-white border-2 border-silver-300 shadow-xl overflow-hidden flex items-center justify-center">
+                        <img id="profile-img" src="profile.jpg" alt="Assya Ummu Habibah" class="w-full h-full object-cover rounded-full" onerror="this.onerror=null; this.classList.add('hidden'); document.getElementById('profile-fallback').classList.remove('hidden');">
+                        <div id="profile-fallback" class="hidden w-full h-full bg-navy-900 text-white rounded-full flex flex-col items-center justify-center">
+                            <i class="fa-solid fa-user text-3xl sm:text-4xl text-amber-300"></i>
+                            <span class="text-[10px] font-bold mt-1 text-slate-200 tracking-wider">PROFILE PHOTO</span>
+                        </div>
+                    </div>
+                    <div class="absolute bottom-1 right-1 w-5 h-5 bg-emerald-500 border-2 border-white rounded-full shadow-md" title="Active Status"></div>
+                </div>
+
+                <!-- Hero Text Content -->
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-navy-900/10 border border-navy-900/20 text-navy-900 text-xs sm:text-sm font-semibold">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+                    Automotive Industrial Engineering — Politeknik STMI Jakarta
+                </div>
+                <h1 class="text-3xl sm:text-5xl font-extrabold text-navy-900 tracking-tight leading-tight">
+                    Assya Ummu Habibah, S.Tr.T.
+                </h1>
+                
+                <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-4 pt-2">
+                    <a href="#projects" class="px-6 py-3 bg-navy-900 hover:bg-slate-800 text-white font-semibold text-sm rounded-xl transition-all shadow-md flex items-center gap-2">
+                        <i class="fa-solid fa-layer-group text-amber-300"></i> View Project Portfolio
+                    </a>
+                    <a href="#contact" class="px-6 py-3 bg-white hover:bg-silver-200 text-navy-900 border border-silver-300 font-semibold text-sm rounded-xl transition-all shadow-sm flex items-center gap-2">
+                        <i class="fa-solid fa-envelope text-navy-900"></i> Get in Touch
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-16 sm:py-24 bg-white border-t border-silver-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold text-navy-900 tracking-tight">About Me</h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Brief professional profile and Automotive Industrial Engineering competencies</p>
+                <div class="w-12 h-1 bg-navy-900 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 items-stretch">
+                <!-- Professional Profile Box -->
+                <div class="bg-silver-100 rounded-2xl p-6 sm:p-8 border border-silver-300 flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold text-navy-900 mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-user-gear text-navy-900"></i> Professional Profile
+                        </h3>
+                        <div class="text-slate-600 text-sm leading-relaxed space-y-3">
+                            <p>
+                                Bachelor of Applied Science (Sarjana Terapan) graduate in Automotive Industrial Engineering from <strong>Politeknik STMI Jakarta</strong> with a GPA of <strong>3.80 / 4.00</strong>.
+                            </p>
+                            <p>
+                                Experienced as a <strong>Quality Control Operation Analyst Intern</strong> at <strong>PT Astra Honda Motor</strong> and a <strong>Fleet Monitoring Intern (Transport Planner)</strong> at <strong>PT Jeje Harapan Transindo</strong>. Experienced in production process monitoring, quality auditing, quality issue investigation, and analysis report preparation.
+                            </p>
+                            <p>
+                                Accustomed to collaborating with cross-functional teams to support quality improvement and operational efficiency. Interested in pursuing a dynamic career in <strong>Quality Control, Quality Assurance, and Manufacturing Engineering</strong>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formal Education & Honors/Awards Cards -->
+                <div class="flex flex-col justify-between gap-5">
+                    <!-- Formal Education Card -->
+                    <div class="bg-indigo-50/50 border border-indigo-200/90 rounded-2xl p-6 shadow-sm flex items-start gap-4 h-full">
+                        <div class="w-12 h-12 rounded-2xl bg-indigo-600 text-white flex items-center justify-center text-xl shrink-0 shadow-md">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-[11px] font-extrabold text-indigo-600 tracking-wider uppercase block">FORMAL EDUCATION</span>
+                            <h4 class="text-lg font-bold text-slate-900 leading-snug">Politeknik STMI Jakarta</h4>
+                            <p class="text-xs font-medium text-slate-600">Diploma IV in Automotive Industrial Engineering</p>
+                            <p class="text-xs text-slate-500">2022 – 2026</p>
+                            <div class="pt-2">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-indigo-600 text-white font-bold text-xs rounded-xl shadow-sm">
+                                    <i class="fa-solid fa-star text-amber-300 text-xs"></i> GPA: 3.80 / 4.00
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Honors & Awards Card -->
+                    <div class="bg-amber-50/40 border border-amber-200/90 rounded-2xl p-6 shadow-sm flex items-start gap-4 h-full">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-xl shrink-0 shadow-md">
+                            <i class="fa-solid fa-award"></i>
+                        </div>
+                        <div class="space-y-1">
+                            <span class="text-[11px] font-extrabold text-amber-700 tracking-wider uppercase block">HONORS & AWARDS</span>
+                            <h4 class="text-lg font-bold text-slate-900 leading-snug">Recipient, 2023 Global Scholarship</h4>
+                            <p class="text-xs font-medium text-slate-600">KT&G Scholarship Foundation</p>
+                            <p class="text-xs text-slate-500">Semester 3 (2023)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-16 sm:py-24 bg-silver-100/80 border-t border-silver-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold text-navy-900 tracking-tight">Work Experience</h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Professional timeline in Quality Control & Logistics Operational Monitoring</p>
+                <div class="w-12 h-1 bg-navy-900 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <!-- Timeline Container -->
+            <div class="max-w-4xl mx-auto relative">
+                <!-- Vertical Line for Desktop -->
+                <div class="hidden sm:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-silver-300"></div>
+
+                <div class="space-y-8 sm:space-y-12">
+                    
+                    <!-- Timeline Item 1: PT Jeje Harapan Transindo -->
+                    <div class="relative flex flex-col sm:flex-row items-center group">
+                        <!-- Left side content on desktop -->
+                        <div class="w-full sm:w-1/2 sm:pr-8 sm:text-right order-2 sm:order-1 mt-4 sm:mt-0">
+                            <div class="bg-white rounded-2xl p-6 border border-silver-300 shadow-sm hover:shadow-md transition text-left">
+                                <div class="flex items-center justify-between gap-2 mb-2">
+                                    <span class="px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-xs font-bold border border-indigo-300">Operations Intern</span>
+                                    <span class="text-xs font-semibold text-slate-500 bg-silver-200 px-2.5 py-1 rounded-md border border-silver-300"><i class="fa-regular fa-calendar mr-1"></i>Jan 2026 – Mar 2026</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-navy-900 mt-1">Transport Planner Internship</h3>
+                                <p class="text-xs font-bold text-slate-600 mb-3"><i class="fa-solid fa-building text-navy-900 mr-1"></i> PT Jeje Harapan Transindo</p>
+                                <ul class="space-y-2 text-xs sm:text-sm text-slate-600 list-disc list-inside leading-relaxed">
+                                    <li>Monitored real-time operational status of 50+ fleet units operating across Java, ensuring shipment processes met target schedules.</li>
+                                    <li>Processed and verified 70+ daily operational cost requests (initial travel allowance, standby/lodging costs, toll subsidies, second driver requirements) in accordance with company procedures.</li>
+                                    <li>Compiled daily unit status and shipment reports for 50+ fleet units, supporting the operations team in shipment completion decision-making.</li>
+                                    <li>Coordinated with the fleet allocation team on unloading time estimates and unit positioning, serving as the basis for fleet plotting for the next shipment cycle.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Central Node -->
+                        <div class="z-10 flex items-center justify-center w-10 h-10 rounded-full bg-navy-900 text-amber-300 border-4 border-white shadow-md order-1 sm:order-2 shrink-0">
+                            <i class="fa-solid fa-truck-fast text-sm"></i>
+                        </div>
+
+                        <!-- Right side label spacer on desktop -->
+                        <div class="w-full sm:w-1/2 sm:pl-8 order-3 hidden sm:block">
+                            <div class="text-xs font-bold text-slate-400 uppercase tracking-wider pl-2">PT Jeje Harapan Transindo</div>
+                        </div>
+                    </div>
+
+                    <!-- Timeline Item 2: AHM -->
+                    <div class="relative flex flex-col sm:flex-row items-center group">
+                        <!-- Left side label spacer on desktop -->
+                        <div class="w-full sm:w-1/2 sm:pr-8 sm:text-right order-3 sm:order-1 hidden sm:block">
+                            <div class="text-xs font-bold text-slate-400 uppercase tracking-wider pr-2">PT Astra Honda Motor</div>
+                        </div>
+
+                        <!-- Timeline Central Node -->
+                        <div class="z-10 flex items-center justify-center w-10 h-10 rounded-full bg-navy-900 text-amber-300 border-4 border-white shadow-md order-1 sm:order-2 shrink-0">
+                            <i class="fa-solid fa-microscope text-sm"></i>
+                        </div>
+
+                        <!-- Right side content on desktop -->
+                        <div class="w-full sm:w-1/2 sm:pl-8 order-2 sm:order-3 mt-4 sm:mt-0">
+                            <div class="bg-white rounded-2xl p-6 border border-silver-300 shadow-sm hover:shadow-md transition">
+                                <div class="flex items-center justify-between gap-2 mb-2">
+                                    <span class="px-3 py-1 rounded-full bg-navy-900/10 text-navy-900 text-xs font-bold border border-navy-900/20">Quality Control Intern</span>
+                                    <span class="text-xs font-semibold text-slate-500 bg-silver-200 px-2.5 py-1 rounded-md border border-silver-300"><i class="fa-regular fa-calendar mr-1"></i>Feb 2025 – Dec 2025</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-navy-900 mt-1">Quality Control Operation Analyst Internship</h3>
+                                <p class="text-xs font-bold text-slate-600 mb-3"><i class="fa-solid fa-building text-navy-900 mr-1"></i> PT Astra Honda Motor (AHM)</p>
+                                <ul class="space-y-2 text-xs sm:text-sm text-slate-600 list-disc list-inside leading-relaxed">
+                                    <li>Conducted process quality audits (Kakotora) across 2 production sections/lines, with daily random sampling of 5 units to ensure process compliance with company quality standards.</li>
+                                    <li>Prepared analysis reports on quality inspection findings as a basis for evaluation and process improvement.</li>
+                                    <li>Conducted root cause investigations using 7 QC Tools, DMAIC, and FTA; one investigation reduced mark setting NG cases from 22 to 8.</li>
+                                    <li>Mapped process flows across 5 production sections under the QCO section, forming the basis for system understanding and operational quality improvement.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Pengalaman Organisasi (Timeline format) -->
+    <section id="organization" class="py-16 sm:py-24 bg-white border-t border-silver-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold text-navy-900 tracking-tight">Organizations & Leadership</h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Timeline of active involvement in student press organization and national event management</p>
+                <div class="w-12 h-1 bg-navy-900 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <!-- Timeline Container for Organization -->
+            <div class="max-w-4xl mx-auto relative">
+                <!-- Vertical Line for Desktop -->
+                <div class="hidden sm:block absolute left-1/2 transform -translate-x-1/2 top-0 bottom-0 w-0.5 bg-silver-300"></div>
+
+                <div class="space-y-8 sm:space-y-12">
+                    
+                    <!-- Org Timeline Item 1: Head of Corporate Division (Feb 2024 – Feb 2025) -->
+                    <div class="relative flex flex-col sm:flex-row items-center group">
+                        <!-- Left side content on desktop -->
+                        <div class="w-full sm:w-1/2 sm:pr-8 sm:text-right order-2 sm:order-1 mt-4 sm:mt-0">
+                            <div class="bg-silver-100 rounded-2xl p-6 border border-silver-300 shadow-sm hover:shadow-md transition text-left">
+                                <div class="flex items-center justify-between gap-2 mb-2">
+                                    <span class="px-3 py-1 rounded-full bg-navy-900 text-white text-xs font-bold">Student Press</span>
+                                    <span class="text-xs font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-md border border-silver-300"><i class="fa-regular fa-calendar mr-1"></i>Feb 2024 – Feb 2025</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-navy-900 mt-1">Head of Corporate Division</h3>
+                                <p class="text-xs font-bold text-indigo-700 mb-3"><i class="fa-solid fa-users text-navy-900 mr-1"></i> Lembaga Pers Mahasiswa Industria</p>
+                                <ul class="space-y-2 text-xs sm:text-sm text-slate-600 list-disc list-inside leading-relaxed">
+                                    <li>Supervised and directed 6 division members (R&D and Entrepreneurship Sub-Divisions) to ensure program execution complied with SOPs.</li>
+                                    <li>Analyzed customer satisfaction and importance questionnaires using the Importance Performance Analysis (IPA) method for monthly media content production.</li>
+                                    <li>Collaborated with Entrepreneurship Sub-Division in establishing partnerships with 6 media partners and producing 21 branding content pieces (reels, posts, snapgrams).</li>
+                                    <li>Achieved 100% growth in Instagram followers (400 to 800+) and generated revenue of Rp1,982,000.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Central Node -->
+                        <div class="z-10 flex items-center justify-center w-10 h-10 rounded-full bg-navy-900 text-amber-300 border-4 border-white shadow-md order-1 sm:order-2 shrink-0">
+                            <i class="fa-solid fa-newspaper text-sm"></i>
+                        </div>
+
+                        <!-- Right side label spacer on desktop -->
+                        <div class="w-full sm:w-1/2 sm:pl-8 order-3 hidden sm:block">
+                            <div class="text-xs font-bold text-slate-400 uppercase tracking-wider pl-2">LPM Industria</div>
+                        </div>
+                    </div>
+
+                    <!-- Org Timeline Item 2: Event Chair Seminar (June 2024) -->
+                    <div class="relative flex flex-col sm:flex-row items-center group">
+                        <!-- Left side label spacer on desktop -->
+                        <div class="w-full sm:w-1/2 sm:pr-8 sm:text-right order-3 sm:order-1 hidden sm:block">
+                            <div class="text-xs font-bold text-slate-400 uppercase tracking-wider pr-2">National Seminar</div>
+                        </div>
+
+                        <!-- Timeline Central Node -->
+                        <div class="z-10 flex items-center justify-center w-10 h-10 rounded-full bg-amber-500 text-slate-950 border-4 border-white shadow-md order-1 sm:order-2 shrink-0">
+                            <i class="fa-solid fa-calendar-star text-sm"></i>
+                        </div>
+
+                        <!-- Right side content on desktop -->
+                        <div class="w-full sm:w-1/2 sm:pl-8 order-2 sm:order-3 mt-4 sm:mt-0">
+                            <div class="bg-silver-100 rounded-2xl p-6 border border-silver-300 shadow-sm hover:shadow-md transition">
+                                <div class="flex items-center justify-between gap-2 mb-2">
+                                    <span class="px-3 py-1 rounded-full bg-amber-500 text-slate-950 text-xs font-bold">Event Lead</span>
+                                    <span class="text-xs font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-md border border-silver-300"><i class="fa-regular fa-calendar mr-1"></i>June 2024</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-navy-900 mt-1">Event Chair — Seminar LPM Industria X SayaKaya</h3>
+                                <p class="text-xs font-bold text-amber-800 mb-3"><i class="fa-solid fa-building text-navy-900 mr-1"></i> PT SayaKaya & LPM Industria</p>
+                                <ul class="space-y-2 text-xs sm:text-sm text-slate-600 list-disc list-inside leading-relaxed">
+                                    <li>Planned the event concept and coordinated preparation and execution together with PT SayaKaya, successfully attracting 50 participants.</li>
+                                    <li>Served as the primary liaison between LPM Industria and PT SayaKaya, negotiating and finalizing the seminar cooperation agreement.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Org Timeline Item 3: Coordinator R&D Sub-Division (Feb 2023 – Feb 2024) -->
+                    <div class="relative flex flex-col sm:flex-row items-center group">
+                        <!-- Left side content on desktop -->
+                        <div class="w-full sm:w-1/2 sm:pr-8 sm:text-right order-2 sm:order-1 mt-4 sm:mt-0">
+                            <div class="bg-silver-100 rounded-2xl p-6 border border-silver-300 shadow-sm hover:shadow-md transition text-left">
+                                <div class="flex items-center justify-between gap-2 mb-2">
+                                    <span class="px-3 py-1 rounded-full bg-navy-900 text-white text-xs font-bold">Student Press</span>
+                                    <span class="text-xs font-semibold text-slate-500 bg-white px-2.5 py-1 rounded-md border border-silver-300"><i class="fa-regular fa-calendar mr-1"></i>Feb 2023 – Feb 2024</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-navy-900 mt-1">Coordinator, R&D Sub-Division</h3>
+                                <p class="text-xs font-bold text-indigo-700 mb-3"><i class="fa-solid fa-chart-pie text-navy-900 mr-1"></i> Lembaga Pers Mahasiswa Industria</p>
+                                <ul class="space-y-2 text-xs sm:text-sm text-slate-600 list-disc list-inside leading-relaxed">
+                                    <li>Developed and analyzed event satisfaction and importance questionnaires using CSI and IPA methods to improve HR Division's events.</li>
+                                    <li>Analyzed customer satisfaction questionnaires and compiled social media data for editorial production themes.</li>
+                                    <li>Conducted comparative studies with other university press organizations to improve organizational performance.</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Timeline Central Node -->
+                        <div class="z-10 flex items-center justify-center w-10 h-10 rounded-full bg-navy-900 text-amber-300 border-4 border-white shadow-md order-1 sm:order-2 shrink-0">
+                            <i class="fa-solid fa-magnifying-glass-chart text-sm"></i>
+                        </div>
+
+                        <!-- Right side label spacer on desktop -->
+                        <div class="w-full sm:w-1/2 sm:pl-8 order-3 hidden sm:block">
+                            <div class="text-xs font-bold text-slate-400 uppercase tracking-wider pl-2">LPM Industria</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-16 sm:py-24 bg-white border-t border-silver-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold text-navy-900 tracking-tight">Skills & Technical Tools</h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Proficiency in quality methodologies, analytical software, and soft skills</p>
+                <div class="w-12 h-1 bg-navy-900 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Skill Category 1 -->
+                <div class="bg-silver-100 rounded-2xl p-6 border border-silver-300">
+                    <div class="w-10 h-10 rounded-xl bg-navy-900 text-white flex items-center justify-center mb-4 font-bold">
+                        <i class="fa-solid fa-gears"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-navy-900 mb-3">Quality & Industrial Methodologies</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">7 QC Tools</span>
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">DMAIC</span>
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Fault Tree Analysis (FTA)</span>
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Kakotora Audit</span>
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">TRIZ Matrix</span>
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">TSKK Type III</span>
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Lean Manufacturing</span>
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Importance Performance Analysis (IPA)</span>
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Customer Satisfaction Index (CSI)</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2 -->
+                <div class="bg-silver-100 rounded-2xl p-6 border border-silver-300">
+                    <div class="w-10 h-10 rounded-xl bg-navy-900 text-white flex items-center justify-center mb-4 font-bold">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-navy-900 mb-3">Software & Hard Skills</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Microsoft Excel</span>
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Minitab</span>
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Microsoft Visio</span>
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Bizagi Modeler</span>
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Microsoft Word & PowerPoint</span>
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Canva</span>
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">CapCut</span>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3 -->
+                <div class="bg-silver-100 rounded-2xl p-6 border border-silver-300">
+                    <div class="w-10 h-10 rounded-xl bg-navy-900 text-white flex items-center justify-center mb-4 font-bold">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-navy-900 mb-3">Soft Skills & Leadership</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Teamwork</span>
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Public Speaking</span>
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Time Management</span>
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Leadership</span>
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Analytical Thinking</span>
+                        <span class="text-xs font-semibold bg-white border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Problem Solving</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-16 sm:py-24 bg-silver-100/60 border-t border-silver-300/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold text-navy-900 tracking-tight">Key Projects & Research</h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Application of Industrial Engineering principles in solving real manufacturing challenges</p>
+                <div class="w-12 h-1 bg-navy-900 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <!-- Projects Grid Cards -->
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Project Card 1 (Final Project / Thesis) -->
+                <div class="bg-white rounded-2xl p-6 border border-silver-300 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-navy-900 text-white flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-md">
+                            <i class="fa-solid fa-crosshairs text-lg"></i>
+                        </div>
+                        <div class="flex items-center justify-between gap-2 mb-2">
+                            <span class="inline-block px-2.5 py-0.5 rounded bg-silver-200 text-navy-900 text-xs font-bold uppercase tracking-wider border border-silver-300">Final Project (Thesis)</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-navy-900 mb-3 leading-snug group-hover:text-indigo-900 transition-colors">
+                            Perancangan Alat Bantu Cross Line Laser Berbasis Pemanfaatan Limbah untuk Meminimasi Repair Mark Setting NG dengan Metode Define, Measure, Analyze, Improve, Control Pada Seksi General Sub Assy di PT ABC
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Application of <strong>DMAIC, 7 QC Tools, FTA, & TRIZ Matrix</strong> to minimize Mark setting defects on CHU at PT ABC by designing a waste-based cross line laser guidance fixture.
+                        </p>
+
+                        <!-- Attachments Column (JPG & PDF) -->
+                        <div class="mb-4">
+                            <span class="text-xs font-semibold text-slate-500 mb-2 block"><i class="fa-solid fa-paperclip text-navy-900 mr-1"></i> Image & Document Attachments (JPG / PDF):</span>
+                            <div class="grid grid-cols-2 gap-2">
+                                <!-- File 1: JPG -->
+                                <button onclick="openThesisModalWithTab('fishbone')" class="aspect-video rounded-lg bg-amber-50 hover:bg-amber-100 border border-amber-200 hover:border-amber-400 p-2 text-left flex flex-col justify-between shadow-sm transition group/doc">
+                                    <div class="flex items-center justify-between w-full">
+                                        <i class="fa-solid fa-image text-amber-600 text-sm"></i>
+                                        <span class="text-[9px] font-bold text-amber-800 bg-amber-200/80 px-1.5 py-0.5 rounded">JPG</span>
+                                    </div>
+                                    <div class="text-[10px] font-bold text-slate-800 leading-tight truncate" title="fishbone rev sidang.jpg">
+                                        fishbone rev sidang.jpg
+                                    </div>
+                                    <span class="text-[8px] text-slate-500">Ishikawa Diagram</span>
+                                </button>
+
+                                <!-- File 2: PDF CAD -->
+                                <button onclick="openThesisModalWithTab('cad')" class="aspect-video rounded-lg bg-red-50 hover:bg-red-100 border border-red-200 hover:border-red-400 p-2 text-left flex flex-col justify-between shadow-sm transition group/doc">
+                                    <div class="flex items-center justify-between w-full">
+                                        <i class="fa-solid fa-file-pdf text-red-600 text-sm"></i>
+                                        <span class="text-[9px] font-bold text-red-800 bg-red-200/80 px-1.5 py-0.5 rounded">PDF</span>
+                                    </div>
+                                    <div class="text-[10px] font-bold text-slate-800 leading-tight truncate" title="Alat Bantu Laser_2.pdf">
+                                        Alat Bantu Laser_2.pdf
+                                    </div>
+                                    <span class="text-[8px] text-slate-500">A3 CAD Drawing</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="pt-4 border-t border-silver-200 flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-semibold bg-silver-100 border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">DMAIC & 7 QC Tools</span>
+                            <span class="text-xs font-semibold bg-silver-100 border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">FTA & TRIZ Matrix</span>
+                            <span class="text-xs font-semibold bg-navy-900 text-white px-2.5 py-1 rounded-md">PT ABC</span>
+                        </div>
+                        
+                        <!-- Modal Trigger Button -->
+                        <button onclick="openThesisModal()" class="w-full py-2.5 px-4 bg-navy-900 hover:bg-slate-800 text-white border border-navy-900 rounded-xl font-semibold text-xs transition-all flex items-center justify-center gap-2 shadow-md">
+                            <i class="fa-solid fa-folder-open text-amber-300"></i> Open Documents & Attachment Viewer
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="bg-white rounded-2xl p-6 border border-silver-300 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-navy-900 text-white flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-md">
+                            <i class="fa-solid fa-chart-line text-lg"></i>
+                        </div>
+                        <span class="inline-block px-2.5 py-0.5 rounded bg-silver-200 text-navy-900 text-xs font-bold uppercase tracking-wider mb-2 border border-silver-300">Lean Manufacturing</span>
+                        <h3 class="text-lg font-bold text-navy-900 mb-3 group-hover:text-indigo-900 transition-colors">
+                            Meningkatkan Man Power Efficiency Pada Produksi Bushing Rubber Menggunakan Tabel Standar Kerja Kombinasi (TSKK) Tipe III di PT Madya Putera Tehnik
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Labor efficiency optimization in the Rubber Bushing production process using Combined Standard Operation Table (TSKK) Type III at PT Madya Putera Tehnik.
+                        </p>
+
+                        <!-- Attachments Column (JPG & PDF) -->
+                        <div class="mb-4">
+                            <span class="text-xs font-semibold text-slate-500 mb-2 block"><i class="fa-solid fa-paperclip text-navy-900 mr-1"></i> Image & Document Attachments (JPG / PDF):</span>
+                            <div class="grid grid-cols-2 gap-2">
+                                <!-- File 1: JPG Preview -->
+                                <button onclick="openProject2Modal('tskk_img')" class="aspect-video rounded-lg bg-amber-50 hover:bg-amber-100 border border-amber-200 hover:border-amber-400 p-2 text-left flex flex-col justify-between shadow-sm transition group/doc">
+                                    <div class="flex items-center justify-between w-full">
+                                        <i class="fa-solid fa-image text-amber-600 text-sm"></i>
+                                        <span class="text-[9px] font-bold text-amber-800 bg-amber-200/80 px-1.5 py-0.5 rounded">JPG</span>
+                                    </div>
+                                    <div class="text-[10px] font-bold text-slate-800 leading-tight truncate" title="tskk_bushing_rubber.jpg">
+                                        tskk_bushing_rubber.jpg
+                                    </div>
+                                    <span class="text-[8px] text-slate-500">TSKK Type III Image</span>
+                                </button>
+
+                                <!-- File 2: PDF Report -->
+                                <button onclick="openProject2Modal('report_pdf')" class="aspect-video rounded-lg bg-red-50 hover:bg-red-100 border border-red-200 hover:border-red-400 p-2 text-left flex flex-col justify-between shadow-sm transition group/doc">
+                                    <div class="flex items-center justify-between w-full">
+                                        <i class="fa-solid fa-file-pdf text-red-600 text-sm"></i>
+                                        <span class="text-[9px] font-bold text-red-800 bg-red-200/80 px-1.5 py-0.5 rounded">PDF</span>
+                                    </div>
+                                    <div class="text-[10px] font-bold text-slate-800 leading-tight truncate" title="laporan_efisiensi_bushing.pdf">
+                                        laporan_efisiensi.pdf
+                                    </div>
+                                    <span class="text-[8px] text-slate-500">PDF Analysis Report</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="pt-4 border-t border-silver-200 flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-semibold bg-silver-100 border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">TSKK Type III</span>
+                            <span class="text-xs font-semibold bg-silver-100 border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Manpower Efficiency</span>
+                            <span class="text-xs font-semibold bg-navy-900 text-white px-2.5 py-1 rounded-md">PT Madya Putera Tehnik</span>
+                        </div>
+                        <button onclick="openProject2Modal('tskk_img')" class="w-full py-2.5 px-4 bg-navy-900 hover:bg-slate-800 text-white border border-navy-900 rounded-xl font-semibold text-xs transition-all flex items-center justify-center gap-2 shadow-md">
+                            <i class="fa-solid fa-folder-open text-amber-300"></i> Open Documents & Attachment Viewer
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="bg-white rounded-2xl p-6 border border-silver-300 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-navy-900 text-white flex items-center justify-center mb-5 group-hover:scale-110 transition-transform shadow-md">
+                            <i class="fa-solid fa-industry text-lg"></i>
+                        </div>
+                        <span class="inline-block px-2.5 py-0.5 rounded bg-silver-200 text-navy-900 text-xs font-bold uppercase tracking-wider mb-2 border border-silver-300">Layout Simulation</span>
+                        <h3 class="text-lg font-bold text-navy-900 mb-3 group-hover:text-indigo-900 transition-colors">
+                            Prototype Factory Layout Design Simulation Project
+                        </h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Prototype factory layout design and simulation to optimize material flow and workspace allocation at PT Nexus Cendekia Prima.
+                        </p>
+
+                        <!-- Attachments Column (JPG & PDF) -->
+                        <div class="mb-4">
+                            <span class="text-xs font-semibold text-slate-500 mb-2 block"><i class="fa-solid fa-paperclip text-navy-900 mr-1"></i> Image & Document Attachments (JPG / PDF):</span>
+                            <div class="grid grid-cols-2 gap-2">
+                                <!-- File 1: JPG Layout -->
+                                <button onclick="openProject3Modal('layout_img')" class="aspect-video rounded-lg bg-amber-50 hover:bg-amber-100 border border-amber-200 hover:border-amber-400 p-2 text-left flex flex-col justify-between shadow-sm transition group/doc">
+                                    <div class="flex items-center justify-between w-full">
+                                        <i class="fa-solid fa-image text-amber-600 text-sm"></i>
+                                        <span class="text-[9px] font-bold text-amber-800 bg-amber-200/80 px-1.5 py-0.5 rounded">JPG</span>
+                                    </div>
+                                    <div class="text-[10px] font-bold text-slate-800 leading-tight truncate" title="desain_layout_pabrik.jpg">
+                                        desain_layout_pabrik.jpg
+                                    </div>
+                                    <span class="text-[8px] text-slate-500">Layout Design Image</span>
+                                </button>
+
+                                <!-- File 2: PDF Simulation -->
+                                <button onclick="openProject3Modal('sim_pdf')" class="aspect-video rounded-lg bg-red-50 hover:bg-red-100 border border-red-200 hover:border-red-400 p-2 text-left flex flex-col justify-between shadow-sm transition group/doc">
+                                    <div class="flex items-center justify-between w-full">
+                                        <i class="fa-solid fa-file-pdf text-red-600 text-sm"></i>
+                                        <span class="text-[9px] font-bold text-red-800 bg-red-200/80 px-1.5 py-0.5 rounded">PDF</span>
+                                    </div>
+                                    <div class="text-[10px] font-bold text-slate-800 leading-tight truncate" title="simulasi_aliran_material.pdf">
+                                        simulasi_aliran.pdf
+                                    </div>
+                                    <span class="text-[8px] text-slate-500">PDF Simulation Report</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="pt-4 border-t border-silver-200 flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs font-semibold bg-silver-100 border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Factory Layout</span>
+                            <span class="text-xs font-semibold bg-silver-100 border border-silver-300 px-2.5 py-1 rounded-md text-slate-700">Material Flow</span>
+                            <span class="text-xs font-semibold bg-navy-900 text-white px-2.5 py-1 rounded-md">PT Nexus Cendekia Prima</span>
+                        </div>
+                        <button onclick="openProject3Modal('layout_img')" class="w-full py-2.5 px-4 bg-navy-900 hover:bg-slate-800 text-white border border-navy-900 rounded-xl font-semibold text-xs transition-all flex items-center justify-center gap-2 shadow-md">
+                            <i class="fa-solid fa-folder-open text-amber-300"></i> Open Documents & Attachment Viewer
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="certifications" class="py-16 sm:py-24 bg-white border-t border-silver-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold text-navy-900 tracking-tight">Certifications & Training</h2>
+                <p class="text-slate-600 mt-2 text-sm sm:text-base">Verified competencies and professional qualification credentials</p>
+                <div class="w-12 h-1 bg-navy-900 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="max-w-2xl mx-auto">
+                <!-- Certification 1: BNSP Quality Control -->
+                <div class="bg-silver-100 rounded-2xl p-6 sm:p-8 border border-silver-300 hover:shadow-lg transition flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-start gap-4 mb-4">
+                            <div class="w-12 h-12 rounded-xl bg-navy-900 text-amber-300 flex items-center justify-center font-bold shrink-0 shadow-md">
+                                <i class="fa-solid fa-award text-xl"></i>
+                            </div>
+                            <div>
+                                <span class="text-[10px] font-extrabold text-amber-800 bg-amber-100 border border-amber-300 px-2 py-0.5 rounded uppercase tracking-wider block w-fit mb-1">BNSP NATIONAL</span>
+                                <h4 class="font-bold text-navy-900 text-base sm:text-lg leading-snug">BNSP Competency Certification</h4>
+                                <p class="text-xs sm:text-sm font-semibold text-slate-700 mt-0.5">Manufacturing System Quality Control Scheme</p>
+                            </div>
+                        </div>
+                        <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                            Official National Professional Certification Board (BNSP) certification for Manufacturing System Quality Control competence, covering Process Quality Audit (Kakotora), 7 QC Tools, DMAIC, FTA, Root Cause Investigation & Quality Analysis Report.
+                        </p>
+
+                        <!-- Certificate Document Attachments -->
+                        <div class="mb-6">
+                            <span class="text-xs font-semibold text-slate-500 mb-2 block"><i class="fa-solid fa-paperclip text-navy-900 mr-1"></i> Certificate Document Attachments (PDF / JPG):</span>
+                            <div class="grid grid-cols-2 gap-3">
+                                <button onclick="openCertModal('bnsp_pdf')" class="aspect-video rounded-xl bg-red-50 hover:bg-red-100 border border-red-200 hover:border-red-400 p-3 text-left flex flex-col justify-between shadow-sm transition group/doc">
+                                    <div class="flex items-center justify-between w-full">
+                                        <i class="fa-solid fa-file-pdf text-red-600 text-base"></i>
+                                        <span class="text-[9px] font-bold text-red-800 bg-red-200/80 px-1.5 py-0.5 rounded">PDF</span>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-bold text-slate-800 leading-tight truncate" title="sertifikat_bnsp_pengendalian_kualitas.pdf">
+                                            sertifikat_bnsp.pdf
+                                        </div>
+                                        <span class="text-[10px] text-slate-500">PDF Document</span>
+                                    </div>
+                                </button>
+
+                                <button onclick="openCertModal('bnsp_img')" class="aspect-video rounded-xl bg-amber-50 hover:bg-amber-100 border border-amber-200 hover:border-amber-400 p-3 text-left flex flex-col justify-between shadow-sm transition group/doc">
+                                    <div class="flex items-center justify-between w-full">
+                                        <i class="fa-solid fa-image text-amber-600 text-base"></i>
+                                        <span class="text-[9px] font-bold text-amber-800 bg-amber-200/80 px-1.5 py-0.5 rounded">JPG</span>
+                                    </div>
+                                    <div>
+                                        <div class="text-xs font-bold text-slate-800 leading-tight truncate" title="sertifikat_bnsp_pengendalian_kualitas.jpg">
+                                            sertifikat_bnsp.jpg
+                                        </div>
+                                        <span class="text-[10px] text-slate-500">Image Preview</span>
+                                    </div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-silver-300">
+                        <button onclick="openCertModal('bnsp_pdf')" class="w-full py-3 px-4 bg-navy-900 hover:bg-slate-800 text-white border border-navy-900 rounded-xl font-semibold text-xs sm:text-sm transition-all flex items-center justify-center gap-2 shadow-md">
+                            <i class="fa-solid fa-folder-open text-amber-300"></i> Open BNSP Certificate Document
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-16 sm:py-24 bg-navy-900 text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">Get in Touch</h2>
+                <p class="text-slate-300 mt-2 text-sm sm:text-base">Let's discuss career opportunities, research collaborations, or industrial projects</p>
+                <div class="w-12 h-1 bg-amber-400 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                <div class="bg-navy-800/80 rounded-2xl p-6 border border-slate-700 text-center flex flex-col items-center justify-center">
+                    <div class="w-12 h-12 rounded-full bg-amber-400/10 text-amber-400 flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <span class="text-xs text-slate-400 font-medium block mb-1">Professional Email</span>
+                    <a href="mailto:syaummuha@gmail.com" class="text-sm font-bold text-white hover:text-amber-300 transition">syaummuha@gmail.com</a>
+                </div>
+
+                <div class="bg-navy-800/80 rounded-2xl p-6 border border-slate-700 text-center flex flex-col items-center justify-center">
+                    <div class="w-12 h-12 rounded-full bg-amber-400/10 text-amber-400 flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </div>
+                    <span class="text-xs text-slate-400 font-medium block mb-1">LinkedIn</span>
+                    <a href="https://linkedin.com/in/assya-ummu-habibah" target="_blank" class="text-sm font-bold text-white hover:text-amber-300 transition">Assya Ummu Habibah</a>
+                </div>
+
+                <div class="bg-navy-800/80 rounded-2xl p-6 border border-slate-700 text-center flex flex-col items-center justify-center">
+                    <div class="w-12 h-12 rounded-full bg-amber-400/10 text-amber-400 flex items-center justify-center mb-4 text-xl">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <span class="text-xs text-slate-400 font-medium block mb-1">Location / Domicile</span>
+                    <span class="text-sm font-bold text-white">Bekasi, Indonesia</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy-950 text-slate-400 py-8 border-t border-slate-800 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© 2024 - 2026 Assya Ummu Habibah, S.Tr.T. Automotive Industrial Engineering Portfolio.</p>
+            <div class="flex items-center gap-6">
+                <a href="#hero" class="hover:text-white transition">Back to Top</a>
+                <a href="#projects" class="hover:text-white transition">Projects</a>
+                <a href="#contact" class="hover:text-white transition">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal 1: Thesis Viewer -->
+    <div id="thesis-modal" class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-5 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-5xl w-full p-5 sm:p-8 shadow-2xl border border-silver-300 relative max-h-[92vh] overflow-y-auto">
+            <button onclick="closeThesisModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-9 h-9 rounded-full bg-silver-100 hover:bg-silver-200 text-slate-600 flex items-center justify-center transition z-10" aria-label="Close modal">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="flex items-start gap-3.5 mb-5 pr-10">
+                <div class="w-10 h-10 rounded-xl bg-navy-900 text-white flex items-center justify-center font-bold shrink-0 mt-1">
+                    <i class="fa-solid fa-graduation-cap text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-xs font-bold text-navy-900 uppercase tracking-wider block mb-1">Final Project (Thesis) Documentation</span>
+                    <h3 class="text-base sm:text-lg font-bold text-navy-900 leading-snug">
+                        Perancangan Alat Bantu Cross Line Laser Berbasis Pemanfaatan Limbah untuk Meminimasi Repair Mark Setting NG dengan Metode Define, Measure, Analyze, Improve, Control Pada Seksi General Sub Assy di PT ABC
+                    </h3>
+                </div>
+            </div>
+
+            <!-- Tab Buttons -->
+            <div class="flex items-center border-b border-silver-300 mb-5 gap-2 overflow-x-auto pb-1">
+                <button id="thesis-tab-btn-fishbone" onclick="switchThesisTab('fishbone')" class="thesis-tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-t-xl transition border-b-2 border-navy-900 text-navy-900 bg-silver-100 flex items-center gap-2 shrink-0">
+                    <i class="fa-solid fa-image text-amber-600"></i> 1. fishbone rev sidang.jpg
+                </button>
+                <button id="thesis-tab-btn-cad" onclick="switchThesisTab('cad')" class="thesis-tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-t-xl transition border-b-2 border-transparent text-slate-500 hover:text-navy-900 flex items-center gap-2 shrink-0">
+                    <i class="fa-solid fa-file-pdf text-red-600"></i> 2. Alat Bantu Laser_2.pdf
+                </button>
+                <button id="thesis-tab-btn-triz" onclick="switchThesisTab('triz')" class="thesis-tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-t-xl transition border-b-2 border-transparent text-slate-500 hover:text-navy-900 flex items-center gap-2 shrink-0">
+                    <i class="fa-solid fa-file-pdf text-red-600"></i> 3. triz_matrix fix.pdf
+                </button>
+            </div>
+
+            <!-- Tab Content JPG Fishbone -->
+            <div id="thesis-tab-content-fishbone" class="thesis-tab-content space-y-3">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-slate-900 text-white p-3 rounded-xl gap-2">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-image text-amber-400"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider">Image: fishbone rev sidang.jpg</span>
+                    </div>
+                    <a href="fishbone rev sidang.jpg" target="_blank" download class="text-xs bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3 py-1.5 rounded-lg transition flex items-center justify-center gap-1.5 shadow">
+                        <i class="fa-solid fa-download text-[11px]"></i> Download / Open JPG File
+                    </a>
+                </div>
+                <div class="bg-slate-100 p-2 sm:p-4 rounded-2xl border border-silver-300 flex items-center justify-center min-h-[380px] relative overflow-hidden">
+                    <img src="fishbone rev sidang.jpg" alt="fishbone rev sidang.jpg" class="max-w-full h-auto max-h-[550px] object-contain rounded-xl shadow-md" onerror="this.classList.add('hidden'); document.getElementById('thesis-fallback-fishbone').classList.remove('hidden');">
+                    <div id="thesis-fallback-fishbone" class="hidden text-center p-6 max-w-lg mx-auto">
+                        <div class="w-16 h-16 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center mx-auto mb-4 border border-amber-300 shadow-sm">
+                            <i class="fa-solid fa-diagram-project text-3xl"></i>
+                        </div>
+                        <h4 class="font-bold text-navy-900 text-base mb-1">fishbone rev sidang.jpg</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Ishikawa Diagram (Fishbone RCA) for Root Cause Analysis of Mark Setting NG Repair at PT ABC.
+                        </p>
+                        <a href="fishbone rev sidang.jpg" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-navy-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl shadow transition">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Original File
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content PDF CAD -->
+            <div id="thesis-tab-content-cad" class="thesis-tab-content hidden space-y-3">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-slate-900 text-white p-3 rounded-xl gap-2">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-file-pdf text-red-400"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider">Document: Alat Bantu Laser_2.pdf</span>
+                    </div>
+                    <a href="Alat Bantu Laser_2.pdf" target="_blank" download class="text-xs bg-red-600 hover:bg-red-700 text-white font-bold px-3 py-1.5 rounded-lg transition flex items-center justify-center gap-1.5 shadow">
+                        <i class="fa-solid fa-download text-[11px]"></i> Download / Open PDF
+                    </a>
+                </div>
+                <div class="bg-slate-100 p-2 sm:p-3 rounded-2xl border border-silver-300 space-y-3">
+                    <iframe src="Alat Bantu Laser_2.pdf" class="w-full h-[500px] rounded-xl border border-silver-300 bg-white" title="Alat Bantu Laser_2.pdf"></iframe>
+                </div>
+            </div>
+
+            <!-- Tab Content PDF TRIZ -->
+            <div id="thesis-tab-content-triz" class="thesis-tab-content hidden space-y-3">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-slate-900 text-white p-3 rounded-xl gap-2">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-file-pdf text-red-400"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider">Document: triz_matrix fix.pdf</span>
+                    </div>
+                    <a href="triz_matrix fix.pdf" target="_blank" download class="text-xs bg-red-600 hover:bg-red-700 text-white font-bold px-3 py-1.5 rounded-lg transition flex items-center justify-center gap-1.5 shadow">
+                        <i class="fa-solid fa-download text-[11px]"></i> Download / Open PDF
+                    </a>
+                </div>
+                <div class="bg-slate-100 p-2 sm:p-3 rounded-2xl border border-silver-300 space-y-3">
+                    <iframe src="triz_matrix fix.pdf" class="w-full h-[500px] rounded-xl border border-silver-300 bg-white" title="triz_matrix fix.pdf"></iframe>
+                </div>
+            </div>
+
+            <div class="mt-6 text-right">
+                <button onclick="closeThesisModal()" class="px-5 py-2.5 bg-navy-900 hover:bg-slate-800 text-white font-semibold text-xs rounded-xl transition">
+                    Close Viewer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Project 2 (Rubber Bushing) -->
+    <div id="project2-modal" class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-5 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-5xl w-full p-5 sm:p-8 shadow-2xl border border-silver-300 relative max-h-[92vh] overflow-y-auto">
+            <button onclick="closeProject2Modal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-9 h-9 rounded-full bg-silver-100 hover:bg-silver-200 text-slate-600 flex items-center justify-center transition z-10" aria-label="Close modal">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="flex items-start gap-3.5 mb-5 pr-10">
+                <div class="w-10 h-10 rounded-xl bg-navy-900 text-white flex items-center justify-center font-bold shrink-0 mt-1">
+                    <i class="fa-solid fa-chart-line text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-xs font-bold text-navy-900 uppercase tracking-wider block mb-1">Project 2 Documentation</span>
+                    <h3 class="text-base sm:text-xl font-bold text-navy-900 leading-snug">
+                        Meningkatkan Man Power Efficiency Pada Produksi Bushing Rubber Menggunakan Tabel Standar Kerja Kombinasi (TSKK) Tipe III di PT Madya Putera Tehnik
+                    </h3>
+                </div>
+            </div>
+
+            <div class="flex items-center border-b border-silver-300 mb-5 gap-2 overflow-x-auto pb-1">
+                <button id="p2-tab-btn-img" onclick="switchProject2Tab('tskk_img')" class="p2-tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-t-xl transition border-b-2 border-navy-900 text-navy-900 bg-silver-100 flex items-center gap-2 shrink-0">
+                    <i class="fa-solid fa-image text-amber-600"></i> 1. tskk_bushing_rubber.jpg
+                </button>
+                <button id="p2-tab-btn-pdf" onclick="switchProject2Tab('report_pdf')" class="p2-tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-t-xl transition border-b-2 border-transparent text-slate-500 hover:text-navy-900 flex items-center gap-2 shrink-0">
+                    <i class="fa-solid fa-file-pdf text-red-600"></i> 2. laporan_efisiensi_bushing.pdf
+                </button>
+            </div>
+
+            <div id="p2-tab-content-img" class="p2-tab-content space-y-3">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-slate-900 text-white p-3 rounded-xl gap-2">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-image text-amber-400"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider">Image: tskk_bushing_rubber.jpg</span>
+                    </div>
+                    <a href="tskk_bushing_rubber.jpg" target="_blank" download class="text-xs bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3 py-1.5 rounded-lg transition flex items-center justify-center gap-1.5 shadow">
+                        <i class="fa-solid fa-download text-[11px]"></i> Download / Open JPG File
+                    </a>
+                </div>
+                <div class="bg-slate-100 p-2 sm:p-4 rounded-2xl border border-silver-300 flex items-center justify-center min-h-[380px] relative overflow-hidden">
+                    <img src="tskk_bushing_rubber.jpg" alt="tskk_bushing_rubber.jpg" class="max-w-full h-auto max-h-[550px] object-contain rounded-xl shadow-md" onerror="this.classList.add('hidden'); document.getElementById('p2-fallback-img').classList.remove('hidden');">
+                    <div id="p2-fallback-img" class="hidden text-center p-6 max-w-lg mx-auto">
+                        <div class="w-16 h-16 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center mx-auto mb-4 border border-amber-300 shadow-sm">
+                            <i class="fa-solid fa-table-cells text-3xl"></i>
+                        </div>
+                        <h4 class="font-bold text-navy-900 text-base mb-1">tskk_bushing_rubber.jpg</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Combined Standard Operation Table (TSKK) Type III - Cycle Time Measurement & Labor Optimization for Rubber Bushing.
+                        </p>
+                        <a href="tskk_bushing_rubber.jpg" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-navy-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl shadow transition">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Original File
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="p2-tab-content-pdf" class="p2-tab-content hidden space-y-3">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-slate-900 text-white p-3 rounded-xl gap-2">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-file-pdf text-red-400"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider">Document: laporan_efisiensi_bushing.pdf</span>
+                    </div>
+                    <a href="laporan_efisiensi_bushing.pdf" target="_blank" download class="text-xs bg-red-600 hover:bg-red-700 text-white font-bold px-3 py-1.5 rounded-lg transition flex items-center justify-center gap-1.5 shadow">
+                        <i class="fa-solid fa-download text-[11px]"></i> Download / Open PDF
+                    </a>
+                </div>
+                <div class="bg-slate-100 p-2 sm:p-3 rounded-2xl border border-silver-300 space-y-3">
+                    <iframe src="laporan_efisiensi_bushing.pdf" class="w-full h-[500px] rounded-xl border border-silver-300 bg-white" title="laporan_efisiensi_bushing.pdf"></iframe>
+                </div>
+            </div>
+
+            <div class="mt-6 text-right">
+                <button onclick="closeProject2Modal()" class="px-5 py-2.5 bg-navy-900 hover:bg-slate-800 text-white font-semibold text-xs rounded-xl transition">
+                    Close Viewer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Project 3 (Layout Simulation) -->
+    <div id="project3-modal" class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-5 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-5xl w-full p-5 sm:p-8 shadow-2xl border border-silver-300 relative max-h-[92vh] overflow-y-auto">
+            <button onclick="closeProject3Modal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-9 h-9 rounded-full bg-silver-100 hover:bg-silver-200 text-slate-600 flex items-center justify-center transition z-10" aria-label="Close modal">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="flex items-start gap-3.5 mb-5 pr-10">
+                <div class="w-10 h-10 rounded-xl bg-navy-900 text-white flex items-center justify-center font-bold shrink-0 mt-1">
+                    <i class="fa-solid fa-industry text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-xs font-bold text-navy-900 uppercase tracking-wider block mb-1">Project 3 Documentation</span>
+                    <h3 class="text-base sm:text-xl font-bold text-navy-900 leading-snug">
+                        Prototype Factory Layout Design Simulation Project (PT Nexus Cendekia Prima)
+                    </h3>
+                </div>
+            </div>
+
+            <div class="flex items-center border-b border-silver-300 mb-5 gap-2 overflow-x-auto pb-1">
+                <button id="p3-tab-btn-img" onclick="switchProject3Tab('layout_img')" class="p3-tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-t-xl transition border-b-2 border-navy-900 text-navy-900 bg-silver-100 flex items-center gap-2 shrink-0">
+                    <i class="fa-solid fa-image text-amber-600"></i> 1. desain_layout_pabrik.jpg
+                </button>
+                <button id="p3-tab-btn-pdf" onclick="switchProject3Tab('sim_pdf')" class="p3-tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-t-xl transition border-b-2 border-transparent text-slate-500 hover:text-navy-900 flex items-center gap-2 shrink-0">
+                    <i class="fa-solid fa-file-pdf text-red-600"></i> 2. simulasi_aliran_material.pdf
+                </button>
+            </div>
+
+            <div id="p3-tab-content-img" class="p3-tab-content space-y-3">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-slate-900 text-white p-3 rounded-xl gap-2">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-image text-amber-400"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider">Image: desain_layout_pabrik.jpg</span>
+                    </div>
+                    <a href="desain_layout_pabrik.jpg" target="_blank" download class="text-xs bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3 py-1.5 rounded-lg transition flex items-center justify-center gap-1.5 shadow">
+                        <i class="fa-solid fa-download text-[11px]"></i> Download / Open JPG File
+                    </a>
+                </div>
+                <div class="bg-slate-100 p-2 sm:p-4 rounded-2xl border border-silver-300 flex items-center justify-center min-h-[380px] relative overflow-hidden">
+                    <img src="desain_layout_pabrik.jpg" alt="desain_layout_pabrik.jpg" class="max-w-full h-auto max-h-[550px] object-contain rounded-xl shadow-md" onerror="this.classList.add('hidden'); document.getElementById('p3-fallback-img').classList.remove('hidden');">
+                    <div id="p3-fallback-img" class="hidden text-center p-6 max-w-lg mx-auto">
+                        <div class="w-16 h-16 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center mx-auto mb-4 border border-amber-300 shadow-sm">
+                            <i class="fa-solid fa-sitemap text-3xl"></i>
+                        </div>
+                        <h4 class="font-bold text-navy-900 text-base mb-1">desain_layout_pabrik.jpg</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            Prototype Factory Layout Blueprint for PT Nexus Cendekia Prima (Workstation Mapping & Material Flow).
+                        </p>
+                        <a href="desain_layout_pabrik.jpg" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-navy-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl shadow transition">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Original File
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="p3-tab-content-pdf" class="p3-tab-content hidden space-y-3">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-slate-900 text-white p-3 rounded-xl gap-2">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-file-pdf text-red-400"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider">Document: simulasi_aliran_material.pdf</span>
+                    </div>
+                    <a href="simulasi_aliran_material.pdf" target="_blank" download class="text-xs bg-red-600 hover:bg-red-700 text-white font-bold px-3 py-1.5 rounded-lg transition flex items-center justify-center gap-1.5 shadow">
+                        <i class="fa-solid fa-download text-[11px]"></i> Download / Open PDF
+                    </a>
+                </div>
+                <div class="bg-slate-100 p-2 sm:p-3 rounded-2xl border border-silver-300 space-y-3">
+                    <iframe src="simulasi_aliran_material.pdf" class="w-full h-[500px] rounded-xl border border-silver-300 bg-white" title="simulasi_aliran_material.pdf"></iframe>
+                </div>
+            </div>
+
+            <div class="mt-6 text-right">
+                <button onclick="closeProject3Modal()" class="px-5 py-2.5 bg-navy-900 hover:bg-slate-800 text-white font-semibold text-xs rounded-xl transition">
+                    Close Viewer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Certificate BNSP Viewer -->
+    <div id="cert-modal" class="fixed inset-0 z-50 hidden bg-navy-950/80 backdrop-blur-sm flex items-center justify-center p-3 sm:p-5 overflow-y-auto">
+        <div class="bg-white rounded-2xl max-w-5xl w-full p-5 sm:p-8 shadow-2xl border border-silver-300 relative max-h-[92vh] overflow-y-auto">
+            <button onclick="closeCertModal()" class="absolute top-4 right-4 sm:top-6 sm:right-6 w-9 h-9 rounded-full bg-silver-100 hover:bg-silver-200 text-slate-600 flex items-center justify-center transition z-10" aria-label="Close modal">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+
+            <div class="flex items-start gap-3.5 mb-5 pr-10">
+                <div class="w-10 h-10 rounded-xl bg-navy-900 text-amber-300 flex items-center justify-center font-bold shrink-0 mt-1">
+                    <i class="fa-solid fa-award text-lg"></i>
+                </div>
+                <div>
+                    <span class="text-xs font-bold text-navy-900 uppercase tracking-wider block mb-1">Official Certification Document</span>
+                    <h3 class="text-base sm:text-xl font-bold text-navy-900 leading-snug">
+                        BNSP Competency Certification — Manufacturing System Quality Control Scheme
+                    </h3>
+                </div>
+            </div>
+
+            <!-- Tab Navigation Buttons -->
+            <div class="flex items-center border-b border-silver-300 mb-5 gap-2 overflow-x-auto pb-1">
+                <button id="cert-tab-btn-pdf" onclick="switchCertTab('bnsp_pdf')" class="cert-tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-t-xl transition border-b-2 border-navy-900 text-navy-900 bg-silver-100 flex items-center gap-2 shrink-0">
+                    <i class="fa-solid fa-file-pdf text-red-600"></i> 1. sertifikat_bnsp_pengendalian_kualitas.pdf
+                </button>
+                <button id="cert-tab-btn-img" onclick="switchCertTab('bnsp_img')" class="cert-tab-btn px-4 py-2 text-xs sm:text-sm font-bold rounded-t-xl transition border-b-2 border-transparent text-slate-500 hover:text-navy-900 flex items-center gap-2 shrink-0">
+                    <i class="fa-solid fa-image text-amber-600"></i> 2. sertifikat_bnsp_pengendalian_kualitas.jpg
+                </button>
+            </div>
+
+            <!-- Tab Content PDF -->
+            <div id="cert-tab-content-pdf" class="cert-tab-content space-y-3">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-slate-900 text-white p-3 rounded-xl gap-2">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-file-pdf text-red-400"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider">Document: sertifikat_bnsp_pengendalian_kualitas.pdf</span>
+                    </div>
+                    <a href="sertifikat_bnsp_pengendalian_kualitas.pdf" target="_blank" download class="text-xs bg-red-600 hover:bg-red-700 text-white font-bold px-3 py-1.5 rounded-lg transition flex items-center justify-center gap-1.5 shadow">
+                        <i class="fa-solid fa-download text-[11px]"></i> Download / Open PDF
+                    </a>
+                </div>
+                <div class="bg-slate-100 p-2 sm:p-3 rounded-2xl border border-silver-300 space-y-3">
+                    <iframe src="sertifikat_bnsp_pengendalian_kualitas.pdf" class="w-full h-[500px] rounded-xl border border-silver-300 bg-white" title="BNSP Certificate PDF"></iframe>
+                </div>
+            </div>
+
+            <!-- Tab Content JPG -->
+            <div id="cert-tab-content-img" class="cert-tab-content hidden space-y-3">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between bg-slate-900 text-white p-3 rounded-xl gap-2">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-image text-amber-400"></i>
+                        <span class="text-xs font-bold uppercase tracking-wider">Image: sertifikat_bnsp_pengendalian_kualitas.jpg</span>
+                    </div>
+                    <a href="sertifikat_bnsp_pengendalian_kualitas.jpg" target="_blank" download class="text-xs bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-3 py-1.5 rounded-lg transition flex items-center justify-center gap-1.5 shadow">
+                        <i class="fa-solid fa-download text-[11px]"></i> Download / Open JPG File
+                    </a>
+                </div>
+                <div class="bg-slate-100 p-2 sm:p-4 rounded-2xl border border-silver-300 flex items-center justify-center min-h-[380px] relative overflow-hidden">
+                    <img src="sertifikat_bnsp_pengendalian_kualitas.jpg" alt="sertifikat_bnsp_pengendalian_kualitas.jpg" class="max-w-full h-auto max-h-[550px] object-contain rounded-xl shadow-md" onerror="this.classList.add('hidden'); document.getElementById('cert-fallback-img').classList.remove('hidden');">
+                    <div id="cert-fallback-img" class="hidden text-center p-6 max-w-lg mx-auto">
+                        <div class="w-16 h-16 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center mx-auto mb-4 border border-amber-300 shadow-sm">
+                            <i class="fa-solid fa-award text-3xl"></i>
+                        </div>
+                        <h4 class="font-bold text-navy-900 text-base mb-1">sertifikat_bnsp_pengendalian_kualitas.jpg</h4>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">
+                            National Professional Certification Board (BNSP) Competency Certificate — Manufacturing System Quality Control Scheme.
+                        </p>
+                        <a href="sertifikat_bnsp_pengendalian_kualitas.jpg" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-navy-900 hover:bg-slate-800 text-white font-bold text-xs rounded-xl shadow transition">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Original File
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 text-right">
+                <button onclick="closeCertModal()" class="px-5 py-2.5 bg-navy-900 hover:bg-slate-800 text-white font-semibold text-xs rounded-xl transition">
+                    Close Viewer
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        }
+
+        function openThesisModal() {
+            const modal = document.getElementById('thesis-modal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            }
+        }
+
+        function closeThesisModal() {
+            const modal = document.getElementById('thesis-modal');
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        }
+
+        function openThesisModalWithTab(tabName) {
+            openThesisModal();
+            if (tabName) switchThesisTab(tabName);
+        }
+
+        function switchThesisTab(tabName) {
+            const contents = document.querySelectorAll('.thesis-tab-content');
+            contents.forEach(c => c.classList.add('hidden'));
+
+            const buttons = document.querySelectorAll('.thesis-tab-btn');
+            buttons.forEach(b => {
+                b.classList.remove('border-navy-900', 'text-navy-900', 'bg-silver-100');
+                b.classList.add('border-transparent', 'text-slate-500');
+            });
+
+            if (tabName === 'fishbone') {
+                document.getElementById('thesis-tab-content-fishbone')?.classList.remove('hidden');
+                document.getElementById('thesis-tab-btn-fishbone')?.classList.add('border-navy-900', 'text-navy-900', 'bg-silver-100');
+            } else if (tabName === 'cad') {
+                document.getElementById('thesis-tab-content-cad')?.classList.remove('hidden');
+                document.getElementById('thesis-tab-btn-cad')?.classList.add('border-navy-900', 'text-navy-900', 'bg-silver-100');
+            } else if (tabName === 'triz') {
+                document.getElementById('thesis-tab-content-triz')?.classList.remove('hidden');
+                document.getElementById('thesis-tab-btn-triz')?.classList.add('border-navy-900', 'text-navy-900', 'bg-silver-100');
+            }
+        }
+
+        function openProject2Modal(tabName) {
+            const modal = document.getElementById('project2-modal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            }
+            if (tabName) switchProject2Tab(tabName);
+        }
+
+        function closeProject2Modal() {
+            const modal = document.getElementById('project2-modal');
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        }
+
+        function switchProject2Tab(tabName) {
+            const contents = document.querySelectorAll('.p2-tab-content');
+            contents.forEach(c => c.classList.add('hidden'));
+
+            const buttons = document.querySelectorAll('.p2-tab-btn');
+            buttons.forEach(b => {
+                b.classList.remove('border-navy-900', 'text-navy-900', 'bg-silver-100');
+                b.classList.add('border-transparent', 'text-slate-500');
+            });
+
+            if (tabName === 'tskk_img') {
+                document.getElementById('p2-tab-content-img')?.classList.remove('hidden');
+                document.getElementById('p2-tab-btn-img')?.classList.add('border-navy-900', 'text-navy-900', 'bg-silver-100');
+            } else {
+                document.getElementById('p2-tab-content-pdf')?.classList.remove('hidden');
+                document.getElementById('p2-tab-btn-pdf')?.classList.add('border-navy-900', 'text-navy-900', 'bg-silver-100');
+            }
+        }
+
+        function openProject3Modal(tabName) {
+            const modal = document.getElementById('project3-modal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            }
+            if (tabName) switchProject3Tab(tabName);
+        }
+
+        function closeProject3Modal() {
+            const modal = document.getElementById('project3-modal');
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        }
+
+        function switchProject3Tab(tabName) {
+            const contents = document.querySelectorAll('.p3-tab-content');
+            contents.forEach(c => c.classList.add('hidden'));
+
+            const buttons = document.querySelectorAll('.p3-tab-btn');
+            buttons.forEach(b => {
+                b.classList.remove('border-navy-900', 'text-navy-900', 'bg-silver-100');
+                b.classList.add('border-transparent', 'text-slate-500');
+            });
+
+            if (tabName === 'layout_img') {
+                document.getElementById('p3-tab-content-img')?.classList.remove('hidden');
+                document.getElementById('p3-tab-btn-img')?.classList.add('border-navy-900', 'text-navy-900', 'bg-silver-100');
+            } else {
+                document.getElementById('p3-tab-content-pdf')?.classList.remove('hidden');
+                document.getElementById('p3-tab-btn-pdf')?.classList.add('border-navy-900', 'text-navy-900', 'bg-silver-100');
+            }
+        }
+
+        function openCertModal(tabName) {
+            const modal = document.getElementById('cert-modal');
+            if (modal) {
+                modal.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            }
+            if (tabName) switchCertTab(tabName);
+        }
+
+        function closeCertModal() {
+            const modal = document.getElementById('cert-modal');
+            if (modal) {
+                modal.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            }
+        }
+
+        function switchCertTab(tabName) {
+            const contents = document.querySelectorAll('.cert-tab-content');
+            contents.forEach(c => c.classList.add('hidden'));
+
+            const buttons = document.querySelectorAll('.cert-tab-btn');
+            buttons.forEach(b => {
+                b.classList.remove('border-navy-900', 'text-navy-900', 'bg-silver-100');
+                b.classList.add('border-transparent', 'text-slate-500');
+            });
+
+            if (tabName === 'bnsp_img') {
+                document.getElementById('cert-tab-content-img')?.classList.remove('hidden');
+                document.getElementById('cert-tab-btn-img')?.classList.add('border-navy-900', 'text-navy-900', 'bg-silver-100');
+            } else {
+                document.getElementById('cert-tab-content-pdf')?.classList.remove('hidden');
+                document.getElementById('cert-tab-btn-pdf')?.classList.add('border-navy-900', 'text-navy-900', 'bg-silver-100');
+            }
+        }
+
+        window.addEventListener('click', (e) => {
+            const modal1 = document.getElementById('thesis-modal');
+            const modal2 = document.getElementById('project2-modal');
+            const modal3 = document.getElementById('project3-modal');
+            const certModal = document.getElementById('cert-modal');
+            if (e.target === modal1) closeThesisModal();
+            if (e.target === modal2) closeProject2Modal();
+            if (e.target === modal3) closeProject3Modal();
+            if (e.target === certModal) closeCertModal();
+        });
+    </script>
+</body>
+</html>
